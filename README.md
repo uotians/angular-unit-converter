@@ -1,6 +1,8 @@
 # UnitConverter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+Project was final assignment of course 'Web Frameworks' in fall 2021. 
+Run 'npm install' to install dependencies.
 
 ## Development server
 
