@@ -1,0 +1,47 @@
+<div class="unit-converter-container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+
+        <mat-grid-list cols="5" rowHeight="1:1">
+            <mat-grid-tile colspan="2"> 
+                <mat-form-field appearance="fill">
+                    <mat-label>Select category</mat-label>
+                    <mat-select [(ngModel)]="categoryValue" name="categoryValue">
+                        <mat-option *ngFor="let cat of categoryModels" [value]="cat.index">{{cat.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field> 
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1">
+                <i class={{categoryIcon}}></i>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="2"> 
+                <mat-form-field appearance="fill">
+                    <mat-label>Select converter</mat-label>
+                    <mat-select [(ngModel)]="converterValue" name="converterValue">
+                        <mat-option *ngFor="let conv of converterModels" [value]="conv.index">{{conv.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field> 
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="2"> 
+                <mat-form-field appearance="fill">
+                    <mat-label>{{inputPrompt}}</mat-label>
+                        <input matInput [(ngModel)]="inputValue" name="inputValue">
+                </mat-form-field> 
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1">
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="2"> 
+                <mat-form-field appearance="fill">
+                    <mat-label>{{outputPrompt}}</mat-label>
+                        <input matInput [(ngModel)]="outputValue" name="outputValue">
+                </mat-form-field> 
+            </mat-grid-tile>
+
+
+        </mat-grid-list> 
+    </form>
+</div> 
